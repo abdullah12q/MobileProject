@@ -33,7 +33,7 @@ class TaskViewModelTest {
         MockitoAnnotations.openMocks(this)
 
 
-        when(mockRepository.getAllTasks()).thenReturn(flowOf(emptyList()))
+        `when`(mockRepository.getAllTasks()).thenReturn(flowOf(emptyList()))
 
 
         viewModel = TaskViewModel(mockRepository)

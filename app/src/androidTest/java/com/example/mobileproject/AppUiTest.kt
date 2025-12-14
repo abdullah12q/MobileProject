@@ -34,7 +34,7 @@ class AppUiTest {
     fun addTask_callsViewModelAddTask() {
         val mockViewModel = mock(TaskViewModel::class.java)
         val tasksFlow = MutableStateFlow(sampleTasks)
-        when(mockViewModel.tasks).thenReturn(tasksFlow)
+        `when`(mockViewModel.tasks).thenReturn(tasksFlow)
 
         composeRule.setContent {
             TaskScreen(viewModel = mockViewModel, onDetailClick = {})
@@ -50,7 +50,7 @@ class AppUiTest {
     fun toggleTask_callsViewModelToggle() {
         val mockViewModel = mock(TaskViewModel::class.java)
         val tasksFlow = MutableStateFlow(sampleTasks)
-        when(mockViewModel.tasks).thenReturn(tasksFlow)
+        `when`(mockViewModel.tasks).thenReturn(tasksFlow)
 
         composeRule.setContent {
             TaskScreen(viewModel = mockViewModel, onDetailClick = {})
@@ -65,7 +65,7 @@ class AppUiTest {
     fun deleteTask_callsViewModelDelete() {
         val mockViewModel = mock(TaskViewModel::class.java)
         val tasksFlow = MutableStateFlow(sampleTasks)
-        when(mockViewModel.tasks).thenReturn(tasksFlow)
+        `when`(mockViewModel.tasks).thenReturn(tasksFlow)
 
         composeRule.setContent {
             TaskScreen(viewModel = mockViewModel, onDetailClick = {})
@@ -83,7 +83,7 @@ class AppUiTest {
         val tasksFlow = MutableStateFlow(sampleTasks)
         var clickedTaskTitle: String? = null
 
-        when(mockViewModel.tasks).thenReturn(tasksFlow)
+        `when`(mockViewModel.tasks).thenReturn(tasksFlow)
 
         composeRule.setContent {
             TaskScreen(
@@ -106,7 +106,7 @@ class AppUiTest {
         try {
             val mockViewModel = mock(TaskViewModel::class.java)
             val tasksFlow = MutableStateFlow(sampleTasks)
-            when(mockViewModel.tasks).thenReturn(tasksFlow)
+            `when`(mockViewModel.tasks).thenReturn(tasksFlow)
 
             composeRule.setContent {
                 TaskScreen(
